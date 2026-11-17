@@ -1,0 +1,13 @@
+node_modules
+web/dist
+data
+docs
+research
+*.png
+*.jpg
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+.dockerignore
+README.md

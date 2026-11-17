@@ -1,0 +1,115 @@
+/* 1g1g Revival 主题系统 —— CSS Variables 实现 5 种历史配色
+   锚点色值来自 research/1g1g-research.md 第四节（官方截图像素采样） */
+
+:root,
+:root[data-theme='blue'] {
+  --bg-bright: #6e93c3;
+  --bg-dark: #4f6e8d;
+  --panel: #496280;
+  --panel-deep: #415871;
+  --panel-border: #3d5471;
+  --accent: #ffd133;
+  --accent-soft: #ffdc50;
+  --topbar: #a1c1e8;
+  --topbar-fg: #2c3e57;
+  --infobar: #cee0ea;
+  --infobar-fg: #33465e;
+  --time-bg: #463c45;
+  --time-fg: #f2f2f2;
+  --row-bg: #ffffff;
+  --row-fg: #2b2b2b;
+  --row-alt: #f4f7fb;
+  --row-hover: #e8eef7;
+  --btn-face: #dce8f2;
+  --btn-fg: #33465e;
+  --btn-border: #b8c9da;
+  --swatch-active: #ffffff;
+  --shadow: rgba(20, 35, 55, 0.45);
+}
+
+/* 红色 */
+:root[data-theme='red'] {
+  --bg-bright: #c36e6e;
+  --bg-dark: #8d4f4f;
+  --panel: #804949;
+  --panel-deep: #714141;
+  --panel-border: #713d3d;
+  --accent: #ffd133;
+  --topbar: #e8a1a1;
+  --topbar-fg: #572c2c;
+  --infobar: #ead0ce;
+  --infobar-fg: #5e3334;
+  --time-bg: #453c3c;
+  --row-hover: #f7e8e8;
+  --btn-face: #f2dcdc;
+  --btn-fg: #5e3334;
+  --btn-border: #dab8b8;
+  --shadow: rgba(55, 20, 20, 0.45);
+}
+
+/* 蓝色（深海洋） */
+:root[data-theme='ocean'] {
+  --bg-bright: #4a7fae;
+  --bg-dark: #2f5678;
+  --panel: #2c4a66;
+  --panel-deep: #264058;
+  --panel-border: #223b52;
+  --accent: #ffd133;
+  --topbar: #7ba7cf;
+  --topbar-fg: #1c2f44;
+  --infobar: #b8d0e2;
+  --infobar-fg: #2c4258;
+  --time-bg: #2f2a38;
+  --row-hover: #e0eaf4;
+  --btn-face: #ccdeee;
+  --btn-fg: #2c4258;
+  --btn-border: #a4bed4;
+  --shadow: rgba(10, 25, 40, 0.5);
+}
+
+/* 黑色 */
+:root[data-theme='black'] {
+  --bg-bright: #4a4a4f;
+  --bg-dark: #26262b;
+  --panel: #33333a;
+  --panel-deep: #2b2b31;
+  --panel-border: #222228;
+  --accent: #ffd133;
+  --topbar: #6b6b74;
+  --topbar-fg: #e8e8ec;
+  --infobar: #3a3a42;
+  --infobar-fg: #d0d0d8;
+  --time-bg: #17171b;
+  --row-bg: #f2f2f2;
+  --row-fg: #1b1b1f;
+  --row-alt: #e4e4e8;
+  --row-hover: #d5d5dc;
+  --btn-face: #55555e;
+  --btn-fg: #e8e8ec;
+  --btn-border: #3d3d45;
+  --shadow: rgba(0, 0, 0, 0.6);
+}
+
+/* Google 彩色 */
+:root[data-theme='google'] {
+  --bg-bright: #6e93c3;
+  --bg-dark: #4f6e8d;
+  --panel: #496280;
+  --panel-deep: #415871;
+  --panel-border: #3d5471;
+  --accent: #ffd133;
+  --topbar: linear-gradient(90deg, #4285f4, #ea4335, #fbbc04, #34a853);
+  --topbar-fg: #ffffff;
+  --infobar: linear-gradient(90deg, #34a853, #4285f4, #ea4335, #fbbc04);
+  --infobar-fg: #ffffff;
+  --time-bg: #463c45;
+  --row-hover: #e8eef7;
+  --btn-face: #dce8f2;
+  --btn-fg: #33465e;
+  --btn-border: #b8c9da;
+  --shadow: rgba(20, 35, 55, 0.45);
+  --g-logo-1: #4285f4;
+  --g-logo-2: #ea4335;
+  --g-logo-3: #fbbc04;
+  --g-logo-4: #34a853;
+}

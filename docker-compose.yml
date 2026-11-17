@@ -1,0 +1,14 @@
+services:
+  1g1g:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - 1g1g-data:/app/data
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    restart: unless-stopped
+
+volumes:
+  1g1g-data:

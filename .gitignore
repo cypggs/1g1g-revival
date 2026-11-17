@@ -1,0 +1,18 @@
+# 依赖与构建产物
+node_modules/
+web/dist/
+
+# 数据（含用户数据，绝不入库）
+data/
+
+# 环境变量与密钥
+.env
+.env.*
+!.env.example
+
+# 系统与编辑器
+.DS_Store
+*.log
+
+# Vercel / 其他部署元数据
+.vercel

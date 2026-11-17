@@ -1,0 +1,25 @@
+{
+  "name": "1g1g-revival",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"vite dev\" \"NODE_ENV=development node server/index.mjs\"",
+    "build": "vite build",
+    "start": "node server/index.mjs",
+    "deploy": "vite build && node server/index.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "concurrently": "^9.0.1",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}
