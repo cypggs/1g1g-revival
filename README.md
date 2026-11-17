@@ -27,6 +27,33 @@ docker run -p 3000:3000 -v 1g1g-data:/app/data 1g1g
 docker compose up
 ```
 
+## 生产部署（VPS + nginx）
+
+参考部署：https://1g1g.cypggs.com
+
+```bash
+# 1. 拉代码
+git clone https://github.com/cypggs/1g1g-revival.git /opt/1g1g
+cd /opt/1g1g
+
+# 2. 构建并运行（数据持久化在 named volume）
+docker build -t 1g1g:latest .
+docker run -d --name 1g1g --restart unless-stopped \
+  -p 127.0.0.1:3000:3000 -v 1g1g-data:/app/data 1g1g:latest
+
+# 3. nginx 反代（详见仓库 wiki，要点）：
+#    proxy_pass http://127.0.0.1:3000; proxy_buffering off;
+#    certbot --nginx -d your.domain.com
+
+# 4. 更新版本
+git pull && docker build -t 1g1g:latest . && docker rm -f 1g1g && \
+docker run -d --name 1g1g --restart unless-stopped \
+  -p 127.0.0.1:3000:3000 -v 1g1g-data:/app/data 1g1g:latest
+```
+
+GitHub Actions 会在每次 push main 时自动构建镜像到 `ghcr.io/cypggs/1g1g-revival`，
+也可用于 Render 等支持 image runtime 的平台（注意：需要持久磁盘挂载 /app/data）。
+
 ## 功能
 
 - **打开即听**：首批 20 首经过真实可播放性验证的歌曲，VIP/版权歌曲绝不入列。
