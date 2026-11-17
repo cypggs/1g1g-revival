@@ -1,5 +1,4 @@
 import { useApp } from '../stores/appStore'
-import { LogoMark } from './LogoMark'
 import type { ThemeName } from '../types'
 
 const SWATCHES: { name: ThemeName; className: string; label: string }[] = [
@@ -16,7 +15,7 @@ export function TopBar() {
   return (
     <header className="topbar">
       <div className="brand">
-        <span className="logo-mark"><LogoMark /></span>
+        <span className="logo-mark"><img src="/logo.png" alt="亦歌" className="logo-img" /></span>
         <span className="logo-text">亦歌</span>
         <span className="beta">Beta</span>
       </div>
@@ -33,6 +32,7 @@ export function TopBar() {
             <button className="link" onClick={() => setAuthModal('login')}>登录</button>
           </>
         )}
+        <a className="link" href="https://github.com/cypggs/1g1g-revival" target="_blank" rel="noreferrer">GitHub</a>
         <a className="link" href="https://tieba.baidu.com/f?kw=%E4%BA%A6%E6%AD%8C" target="_blank" rel="noreferrer">亦歌吧</a>
         <button className="link" onClick={() => alert('帮助：\n\nT 热门  F 收藏  H 刚听过\nP 播放/暂停  N 下一首  M 静音\n\n双击"下一首"按钮可更换当前歌曲播放源。')}>帮助</button>
         <span className="swatches" title="配色方案">
