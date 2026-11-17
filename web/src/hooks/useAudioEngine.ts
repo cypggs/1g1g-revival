@@ -73,7 +73,10 @@ export const controls = {
     const el = element()
     if (!el.src) return loadCurrent(true)
     try { await el.play() } catch (error) {
-      usePlayer.getState().setError(error instanceof Error ? error.message : '播放失败（浏览器可能阻止了自动播放）')
+      const notAllowed = error instanceof DOMException && error.name === 'NotAllowedError'
+      usePlayer.getState().setError(notAllowed
+        ? '浏览器阻止了自动播放，请再点一次播放按钮'
+        : error instanceof Error ? error.message : '播放失败')
     }
   },
   pause() { element().pause() },
