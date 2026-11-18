@@ -77,6 +77,6 @@
 
 ## 已知限制（诚实记录）
 
-1. Wayback 限流导致无法抓取 2009-2013 快照做像素级 CSS 校对，当前视觉基于 research/screenshots/interactions/ 的原版截图（40+ 张）采样。
+1. ~~Wayback 快照~~ 已解决（2026-11-19）：抓取确认网页版为 Flash 应用（loader.swf），UI 视觉不在 CSS 中，SWF 未被收录已失传；当前视觉依据官方帮助截图（research/screenshots/，40+ 张）采样，这是现存最精确的参考。原始品红双音符 favicon 已存档 research/wayback/favicon.png。
 2. 搜索深链取 cloudsearch 第一条结果，可能是翻唱版本（如《晴天》原唱搜索命中翻唱）——与原版「打开即听」取舍一致，优先保证可播放。
 3. 匿名用户的收藏/设置需登录（原版 2009 年也要求登录，行为一致）。

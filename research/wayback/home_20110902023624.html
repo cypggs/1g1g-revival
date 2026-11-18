@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>亦歌-自由自在听音乐</title>
+		<link rel="icon" type="image/png" href="favicon.png" />
+        <meta name="application-name" content="亦歌"/>
+		<meta name="description" content="亦歌提供简单、快捷的在线音乐服务，无需操作即可连续不断播放好听的歌曲，很适于一边使用电脑一边听歌时使用。" />
+        <meta name="application-url" content="http://www.1g1g.com"/>
+		<script type="text/javascript" src="/js/index.js"></script>
+		<script type="text/javascript" src="/js/notice.js"></script>
+		
+		
+		<style type="text/css">
+			body,html {
+				margin:0;
+				line-height:1.5em;
+				font-family: verdana;
+				overflow: hidden;
+				height: 100%;				
+			}
+			a {
+				textDecoration:underline;
+				margin:0 .25em;
+			}
+			p {
+				margin:.5em 0;
+			}
+			.hightlignt{
+				color:#f00;
+				font-weight:bold;
+			}
+			#myContent{
+				padding:30px 60px;
+			}
+			#myContent img{
+				border:0; 
+				float:right; 
+				margin:20px 0 0 20px;
+			}
+		</style>
+	</head>
+	<body onload="writeContent();">
+		<script type="text/javascript">
+			if(parseInt(getFlashplayerVersion().split(".")[0])>8){
+				if(isFrequent() == false)
+				{
+					createPlayer();
+				}
+				else
+				{
+					onFlashInit();
+					drawStartBtn();
+				}
+			}
+			
+			else
+			{
+				if (window.location.href.split(".com/s/").length>1) {
+					window.location.href = "http://www.1g1g.com/html5/html5.html#" + window.location.href.split(".com/s/")[1];
+				}
+				else {
+				
+					window.location.href = "http://www.1g1g.com/html5/html5.html" + window.location.hash;
+				}
+			}
+		</script>	
+		<div id="myContent">
+			<div id="p1"></div>			
+			<h2>亦歌简介</h2>
+			    <p>在线音乐播放器<a href="http://www.1g1g.com" target="_blank">亦歌</a>，致力于为您提供<b>简洁</b>、<b>舒心</b>、<b>实用</b>的在线听歌服务。</p>
+			    <p>如果您有一边在电脑上工作、娱乐一边听音乐的习惯，亦歌希望成为您首选的听歌工具！</p>
+			    <p>亦歌实现了零输入的自动播放模式，无需您任何操作即可连续不断地播放好听的歌曲。</p>
+			    <p>在您的使用过程中，亦歌自动记录了您进行过的操作，通过对这些操作进行分析系统逐渐了解您的音乐爱好，越来越多地播放您偏爱风格的歌曲。</p>
+			    <p>亦歌播放的歌曲链接来源于互联网。系统进行了高强度的筛选，保证绝大多数歌曲可以正确播放。</p>
+			    <p>您在使用亦歌的过程中如有任何问题和建议，欢迎在<a href="http://tieba.baidu.com/f?kw=%D2%E0%B8%E8" target="_blank">亦歌吧</a>与我们交流。</p>
+			    <p>亦歌团队祝您使用愉快！</p>
+		</div>
+		<script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+			var pageTracker = _gat._getTracker("UA-3689486-1");
+			pageTracker._initData();
+			pageTracker._trackPageview();
+			pagePublicTracker = _gat._getTracker("UA-10197155-1");
+			pagePublicTracker._initData();
+			var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+			document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F350e824b48b2d02f8a8d11e138ce53a8' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+	</body>
+</html>
